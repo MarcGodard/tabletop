@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <can-import from="tabletop/styles.less" />
+    <can-import from="tabletop/app" export-as="viewModel" />
+    <can-import from="tabletop/components/table-top/" />
+
+    <table-top></table-top>
+
+    {{#switch env.NODE_ENV}}
+      {{#case "production"}}
+        <script src="{{joinBase 'steal.production.js'}}"></script>
+      {{/case}}
+      {{#default}}
+        <script src="/node_modules/steal/steal.js"></script>
+      {{/default}}
+    {{/switch}}
+  </body>
+</html>

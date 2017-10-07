@@ -1,0 +1,19 @@
+<div id="{{id}}" class="modal{{#each modal.classes}} {{this}} {{/each}}" style="top:{{top}}px; left:{{left}}px; height:{{height}}px; width:{{width}}px; z-index: {{zIndex}}">
+  <div class="resize north-resize"></div>
+  <div class="resize south-resize"></div>
+  <div class="resize east-resize"></div>
+  <div class="resize west-resize"></div>
+  <div class="resize nw-resize"></div>
+  <div class="resize ne-resize"></div>
+  <div class="resize sw-resize"></div>
+  <div class="resize se-resize"></div>
+  <header class="modal-header resize drag-modal">
+    <h1 class="modal-header-title left">{{title}} {{id}}</h1>
+    <button class="modal-header-btn right" on:click="closeModal()" title="Close Modal">CLOSE</button>
+  </header>
+  <div class="modal-body">
+    <section class="modal-content">
+      <content></content>
+    </section>
+  </div>
+</div>

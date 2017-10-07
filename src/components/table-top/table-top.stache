@@ -1,0 +1,9 @@
+<can-import from="tabletop/components/table-top/mat/" />
+<div class="topbar">
+  <button on:click="openModal()" class="btn-fixed">Open a modal</button>
+</div>
+<div class="tabletop">
+  {{#each modals}}
+    <table-mat {(modal)}="this" {(modals)}="modals"><b>Something</b></table-mat>
+  {{/each}}
+</div>
